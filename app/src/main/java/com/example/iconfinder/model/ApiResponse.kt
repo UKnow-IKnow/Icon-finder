@@ -1,5 +1,5 @@
 package com.example.iconfinder.model
 
-class ApiResponse {
+ class ApiResponse (
     val icons: List<Icon>
-}
+ )

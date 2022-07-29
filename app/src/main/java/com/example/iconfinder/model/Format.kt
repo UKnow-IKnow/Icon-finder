@@ -2,15 +2,13 @@ package com.example.iconfinder.model
 
 import com.google.gson.annotations.SerializedName
 
-class Format {
 
-    class Format (
-        val format: String,
+class Format(
+    val format: String,
 
-        @SerializedName("download_url")
-        val downloadUrl: String,
+    @SerializedName("download_url")
+    val downloadUrl: String,
 
-        @SerializedName("preview_url")
-        val previewUrl: String
-    )
-}
+    @SerializedName("preview_url")
+    val previewUrl: String
+)

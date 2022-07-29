@@ -2,7 +2,7 @@ package com.example.iconfinder.model
 
 import com.google.gson.annotations.SerializedName
 
-class RasterSize {
+class RasterSize (
 
     @SerializedName("size_height")
     val sizeHeight: String,
@@ -14,4 +14,4 @@ class RasterSize {
 
     val formats: List<Format>
 
-}
+)

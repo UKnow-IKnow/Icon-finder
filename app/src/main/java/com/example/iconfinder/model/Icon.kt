@@ -2,7 +2,7 @@ package com.example.iconfinder.model
 
 import com.google.gson.annotations.SerializedName
 
-class Icon {
+class Icon(
     @SerializedName("is_premium")
     val isPremium: Boolean,
 
@@ -15,4 +15,4 @@ class Icon {
 
     @SerializedName("icon_id")
     val id: Int
-}
+)

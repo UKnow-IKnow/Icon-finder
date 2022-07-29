@@ -1,6 +1,6 @@
 package com.example.iconfinder.utils
 
-const val BASE_URL = "https://api.iconfinder.com/v3/"
+const val BASE_URL = "https://api.iconfinder.com/v4/"
 
 const val QUERY = "query"
 const val COUNT = "count"

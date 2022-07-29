@@ -1,6 +1,5 @@
 package com.example.iconfinder.model
 
-class Price {
+class Price (
     val currency: String,
-    val price: String
-}
+)

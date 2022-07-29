@@ -28,7 +28,6 @@ object Repository {
                 isLoading = false
             }
         }
-
         return iconsLiveData
     }
 
