@@ -4,7 +4,6 @@ import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.iconfinder.BuildConfig
@@ -18,8 +17,7 @@ import com.example.iconfinder.utils.CLIENT_ID
 import com.example.iconfinder.utils.CLIENT_SECRET
 import kotlinx.android.synthetic.main.item.view.*
 
-class ListAdapter(var list: List<Icon>)
-    : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
+class ListAdapter(var list: List<Icon>) : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(

@@ -1,23 +1,23 @@
 package com.example.iconfinder.api
 
-import com.example.iconfinder.Service.DownloadService
-import com.example.iconfinder.utils.BASE_URL
 import android.Manifest
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.os.Build
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.iconfinder.Service.DownloadService
+import com.example.iconfinder.utils.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
-import android.net.ConnectivityManager
-import android.net.NetworkCapabilities
-import android.os.Build
 
 private val interceptor = HttpLoggingInterceptor()
 private val httpClient = OkHttpClient.Builder().addInterceptor(interceptor)

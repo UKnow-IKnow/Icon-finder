@@ -19,7 +19,8 @@ object Repository {
     fun getIcons(query: String, count: Int, index: Int): MutableLiveData<List<Icon>> {
         isLoading = true
         val job = CoroutineScope(coroutineScope).launch {
-            val request: Response<ApiResponse> = retrofitClient.getIcons(params(query, count, index))
+            val request: Response<ApiResponse> =
+                retrofitClient.getIcons(params(query, count, index))
 
             if (request.isSuccessful) {
                 isLoading = false

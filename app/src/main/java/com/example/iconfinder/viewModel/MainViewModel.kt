@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import com.example.iconfinder.model.Icon
 import com.example.iconfinder.repository.Repository
 
-class MainViewModel(application: Application): AndroidViewModel(application) {
+class MainViewModel(application: Application) : AndroidViewModel(application) {
     private var recentQuery = "\"\""
     private var recentCount = 0
     private var recentIndex = 0
