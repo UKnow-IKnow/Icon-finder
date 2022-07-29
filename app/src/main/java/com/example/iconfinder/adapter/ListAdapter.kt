@@ -1,4 +1,4 @@
-package com.example.iconfinder.Adapter
+package com.example.iconfinder.adapter
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -60,7 +60,7 @@ class ListAdapter(var list: List<Icon>)
                     price.visibility = View.VISIBLE
 
                     if (item.prices.isNotEmpty())
-                        price.text = "${item.prices[0].currency} ${item.prices[0]}"
+                        price.text = "${item.prices[0].currency} ${item.prices[0].price}"
 
                 } else {
                     image_paid.visibility = View.INVISIBLE

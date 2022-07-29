@@ -2,7 +2,6 @@ package com.example.iconfinder
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -12,10 +11,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.iconfinder.Adapter.ListAdapter
 import com.example.iconfinder.Service.DownloadService
+import com.example.iconfinder.adapter.ListAdapter
+import com.example.iconfinder.api.hasNetWorkConnection
 import com.example.iconfinder.api.isLoading
-import com.example.iconfinder.api.isNetworkConnected
 import com.example.iconfinder.api.toast
 import com.example.iconfinder.model.Icon
 import com.example.iconfinder.utils.NUMBER_OF_ICONS
@@ -23,7 +22,6 @@ import com.example.iconfinder.utils.QUERY
 import com.example.iconfinder.utils.START_INDEX
 import com.example.iconfinder.viewModel.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -47,10 +45,10 @@ class MainActivity : AppCompatActivity() {
             startIndex = savedInstanceState.getInt(START_INDEX, 0)
         }
 
-        if (isNetworkConnected(this))
+        if (hasNetWorkConnection(this))
             loadData(query, NUMBER_OF_ICONS, startIndex)
         else
-            toast("No internet connection available")
+            toast("No Internet Connection")
 
         addOnScrollListener()
     }
@@ -78,8 +76,7 @@ class MainActivity : AppCompatActivity() {
                 adapter.submitList(listItems)
 
                 showLoading(false)
-                if (list.isEmpty()) toast("No more results found!")
-                Log.d("Main", listItems.size.toString())
+                if (list.isEmpty()) toast("Result not found!")
             })
     }
 

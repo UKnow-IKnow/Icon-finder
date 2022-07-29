@@ -64,7 +64,7 @@ fun downloadImage(context: Context, downloadUrl: String) {
     context.startService(intent)
 }
 
-fun isNetworkConnected(context: Context): Boolean {
+fun hasNetWorkConnection(context: Context): Boolean {
     val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
     if (Build.VERSION.SDK_INT < 23) {
